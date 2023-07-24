@@ -1,0 +1,266 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  background-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+label {
+  display: block;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 18px;
+  background-color: #f7f7f7;
+  background: -webkit-linear-gradient(to right, #ff5858, #f857a6);
+  background: linear-gradient(to right, #ff5858, #f857a6);
+}
+
+.wrapper {
+  overflow-x: hidden;
+  padding: 25px;
+}
+
+.msg {
+  position: relative;
+  border-top: 50px solid rgb(115, 115, 255);
+}
+
+.msg::before {
+  content: 'Повідомлення з сайту';
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  position: absolute;
+  top: -50px;
+  padding-top: 15px;
+  left: 0;
+  right: 0;
+  height: 50px;
+  z-index: 10;
+}
+
+.msg-text {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.form,
+.msg {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group.error .form-input,
+.form-group.error .input-set {
+  border-color: red;
+}
+
+.form-group.error .form-input:focus,
+.form-group.error .input-set.focused  {
+  outline-color: rgb(255, 122, 122) ;
+}
+
+.form-group.error .form-msg {
+  color: red;
+}
+
+.form-group.success .form-input {
+  border-color: green
+}
+
+.form-group.success .form-msg {
+  color: green;
+}
+
+.form-label {
+  margin-bottom: 5px;
+}
+
+.form-input,
+.input-set {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #ababab;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  margin-bottom: 5px;
+}
+
+.form-input[readonly] {
+  color: #ddd;
+  cursor: not-allowed;
+}
+
+.form-input:focus,
+.input-set.focused,
+.form-btn:focus,
+.checkbox-set.focused .form-label::before,
+.show-password:focus,
+.btn:focus   {
+  outline: 2px solid rgb(115, 115, 255);
+  outline-offset: 2px;
+}
+
+
+.form-msg {
+  min-height: 20px;
+  font-size: 13px;
+}
+
+.input-set {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.input-set input {
+  width: 100%;
+}
+
+.show-password {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 3px;
+  background-image: url('images/icon-eye-close.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.show-password.active {
+  background-image: url('images/icon-eye-open.svg');
+}
+
+.checkbox-set {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-set .form-label {
+  display: flex;
+  gap: 10px;
+}
+
+.checkbox-set.focused .form-label::before {
+  outline-color: rgb(115, 115, 255);
+}
+
+.checkbox-set .form-label::before {
+  content: '';
+  width: 25px;
+  min-width: 25px;
+  height: 25px;
+  background-color: #f7f7f7;
+  border: 1px solid #ababab;
+  border-radius: 3px;
+  background-clip: content-box;
+  padding: 4px;
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.form-checkbox:checked + .form-label::before {
+  background-color: rgb(115, 115, 255);
+}
+
+.form-btn,
+.btn {
+  border-radius: 5px;
+  padding: 15px 20px;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  background-color: rgb(115, 115, 255);
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.btn {
+  background-color:rgb(255, 122, 122);
+}
+
+.btn {
+  width: fit-content;
+}
+
+.form-btn:hover,
+.btn:hover {
+  box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.15);
+}
+
+.form-btn:focus,
+.btn:focus {
+  outline-offset: 2px;
+}
+
+.form-btn:active,
+.btn:active {
+  transform: translateY(3px);
+}
+
+.form-btn[disabled] {
+  cursor: not-allowed;
+  background-color: #ababab;
+}
+
+.form-btn:not([disabled]) + .form-msg {
+  display: none;
+} 

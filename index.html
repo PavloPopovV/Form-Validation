@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма реєстрації</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <form class="form signup" action="" name="signupForm">
+      <div class="form-group">
+        <label class="form-label" for="firstName">Ваше ім'я *</label>
+        <input class="form-input" type="text" id="firstName" name="firstName" placeholder="Введіть ваше ім'я" required>
+        <div class="form-msg"></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="lastName">Ваше прізвище *</label>
+        <input class="form-input" type="text" id="lastName" name="lastName" placeholder="Введіть ваше прізвище" >
+        <div class="form-msg"></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label phone-label" for="phoneNumber">Номер телефону *</label>
+        <div class="input-set input-set-phone">
+          <div class="phone-item">+38</div><input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Введіть ваш номер">
+        </div>
+        <div class="form-msg"></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">Електронна пошта *</label>
+        <input class="form-input" type="email" id="email" name="email" placeholder="Введіть ваш email">
+        <div class="form-msg"></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="password">Пароль *</label>
+        <div class="input-set input-set-password">
+          <input type="password" id="password" name="password" placeholder="Введіть пароль"><button class="show-password" type="button"></button>
+        </div>
+        <div class="form-msg"></div>
+      </div>
+      <div class="form-group">
+        <div class="checkbox-set">
+          <input class="form-checkbox sr-only" type="checkbox" id="agree" name="agree" required>
+          <label class="form-label" for="agree">Я погоджуюся з умовами використання</label>
+        </div>
+      </div>
+      <button class="form-btn js_signup" type="submit" name="signupBtn" disabled>Зареєструватися</button>
+      <div class="form-msg">
+        Для реєстрації усі поля мають бути заповнені, також потрібно дати згоду на умови використання.
+      </div>
+    </form>
+  </div>
+  <script src="vendor.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

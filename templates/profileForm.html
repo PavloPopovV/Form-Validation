@@ -1,0 +1,32 @@
+<form action="" class="form" name="profileForm">
+  <div class="form-group">
+    <label class="form-label" for="firstName">Ваше ім'я *</label>
+    <input class="form-input" type="text" id="firstName" name="firstName" placeholder="Введіть ваше ім'я" required>
+    <div class="form-msg"></div>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="lastName">Ваше прізвище *</label>
+    <input class="form-input" type="text" id="lastName" name="lastName" placeholder="Введіть ваше прізвище">
+    <div class="form-msg"></div>
+  </div>
+  <div class="form-group">
+    <label class="form-label phone-label" for="phoneNumber">Номер телефону *</label>
+    <div class="input-set input-set-phone">
+      <div class="phone-item">+38</div><input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Введіть ваш номер">
+    </div>
+    <div class="form-msg"></div>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="email">Електронна пошта *</label>
+    <input class="form-input" type="email" id="email" name="email" placeholder="Введіть ваш email" readonly>
+    <div class="form-msg"></div>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="password">Новий пароль *</label>
+    <div class="input-set input-set-password">
+      <input type="password" id="password" name="password" placeholder="Введіть новий пароль"><button class="show-password" type="button"></button>
+    </div>
+    <div class="form-msg"></div>
+  </div>
+  <button class="form-btn js_save-btn" type="submit" name="saveBtn">Зберегти зміни</button>
+</form>
